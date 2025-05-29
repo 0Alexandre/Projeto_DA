@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Model"
   ],
-  "SelectedNode": "\\frmLogin.cs",
+  "SelectedNode": "\\Model\\Tarefa.cs",
   "PreviewInSolutionExplorer": false
 }

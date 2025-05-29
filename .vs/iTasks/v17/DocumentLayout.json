@@ -3,12 +3,48 @@
   "WorkspaceRootPath": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\alexandre\\documents\\projeto_da\\view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|C:\\Users\\Alexandre\\Documents\\Projeto_DA\\view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\alexandre\\documents\\projeto_da\\controller\\loginsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\alexandre\\documents\\projeto_da\\view\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:view\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\alexandre\\documents\\projeto_da\\view\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:view\\frmkanban.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|C:\\Users\\Alexandre\\Documents\\Projeto_DA\\controller\\loginsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:controller\\loginsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|C:\\Users\\Alexandre\\Documents\\Projeto_DA\\model\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:model\\utilizador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|C:\\Users\\Alexandre\\Documents\\Projeto_DA\\view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:view\\frmlogin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|C:\\Users\\Alexandre\\Documents\\Projeto_DA\\model\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:model\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|C:\\Users\\Alexandre\\Documents\\Projeto_DA\\model\\tipotarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:model\\tipotarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|C:\\Users\\Alexandre\\Documents\\Projeto_DA\\model\\gestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:model\\gestor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|c:\\users\\alexandre\\documents\\projeto_da\\model\\tarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:model\\tarefa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|C:\\Users\\Alexandre\\Documents\\Projeto_DA\\model\\programador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{40078359-763C-472D-9D7E-8C252267F6FC}|iTasks.csproj|solutionrelative:model\\programador.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,8 +54,35 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmLogin.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmLogin.cs",
+              "RelativeDocumentMoniker": "View\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmLogin.cs",
+              "RelativeToolTip": "View\\frmLogin.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAIwDQAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-07T09:35:24.724Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmKanban.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmKanban.cs",
+              "RelativeDocumentMoniker": "View\\frmKanban.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmKanban.cs [Design]",
+              "RelativeToolTip": "View\\frmKanban.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T21:34:00.913Z",
+              "IsPinned": true,
+              "EditorCaption": " [Design]"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
@@ -46,28 +109,118 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "frmKanban.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmKanban.cs",
+              "RelativeDocumentMoniker": "View\\frmKanban.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmKanban.cs",
+              "RelativeToolTip": "View\\frmKanban.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-29T21:34:05.066Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Utilizador.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\Utilizador.cs",
+              "RelativeDocumentMoniker": "Model\\Utilizador.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\Utilizador.cs",
+              "RelativeToolTip": "Model\\Utilizador.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T11:07:19.061Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "frmLogin.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmLogin.cs",
+              "RelativeDocumentMoniker": "View\\frmLogin.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmLogin.cs [Design]",
+              "RelativeToolTip": "View\\frmLogin.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T11:23:11.618Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Model\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\AppDbContext.cs",
+              "RelativeToolTip": "Model\\AppDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T11:07:20.929Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TipoTarefa.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\TipoTarefa.cs",
+              "RelativeDocumentMoniker": "Model\\TipoTarefa.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\TipoTarefa.cs",
+              "RelativeToolTip": "Model\\TipoTarefa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T11:07:18.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Tarefa.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\Tarefa.cs",
+              "RelativeDocumentMoniker": "Model\\Tarefa.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\Tarefa.cs",
+              "RelativeToolTip": "Model\\Tarefa.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T11:07:17.277Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Programador.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\Programador.cs",
+              "RelativeDocumentMoniker": "Model\\Programador.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\Programador.cs",
+              "RelativeToolTip": "Model\\Programador.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T11:07:16.26Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Gestor.cs",
+              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\Gestor.cs",
+              "RelativeDocumentMoniker": "Model\\Gestor.cs",
+              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Model\\Gestor.cs",
+              "RelativeToolTip": "Model\\Gestor.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-14T11:07:13.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "LoginSistema.cs",
               "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Controller\\LoginSistema.cs",
               "RelativeDocumentMoniker": "Controller\\LoginSistema.cs",
               "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\Controller\\LoginSistema.cs",
               "RelativeToolTip": "Controller\\LoginSistema.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAqAAAAAAAAAA==",
+              "ViewState": "AgIAABsAAAAAAAAAAAAAACUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-14T10:58:22.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmLogin.cs",
-              "DocumentMoniker": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmLogin.cs",
-              "RelativeDocumentMoniker": "View\\frmLogin.cs",
-              "ToolTip": "C:\\Users\\Alexandre\\Documents\\Projeto_DA\\View\\frmLogin.cs",
-              "RelativeToolTip": "View\\frmLogin.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAACgAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-07T09:35:24.724Z",
               "EditorCaption": ""
             }
           ]

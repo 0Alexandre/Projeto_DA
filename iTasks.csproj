@@ -72,16 +72,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controller\LoginSistema.cs" />
-    <Compile Include="Models\AppDbContext.cs" />
+    <Compile Include="Model\AppDbContext.cs" />
     <Compile Include="Migrations\202505141040382_InitialCreate.cs" />
     <Compile Include="Migrations\202505141040382_InitialCreate.Designer.cs">
       <DependentUpon>202505141040382_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
-    <Compile Include="Models\Gestor.cs" />
-    <Compile Include="Models\Programador.cs" />
-    <Compile Include="Models\Tarefa.cs" />
-    <Compile Include="Models\TipoTarefa.cs" />
+    <Compile Include="Model\Gestor.cs" />
+    <Compile Include="Model\Programador.cs" />
+    <Compile Include="Model\Tarefa.cs" />
+    <Compile Include="Model\TipoTarefa.cs" />
     <Compile Include="View\frmConsultarTarefasConcluidas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,7 +126,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Utilizador.cs" />
+    <Compile Include="Model\Utilizador.cs" />
     <EmbeddedResource Include="Migrations\202505141040382_InitialCreate.resx">
       <DependentUpon>202505141040382_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>

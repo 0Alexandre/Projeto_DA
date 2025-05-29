@@ -20,3 +20,4 @@ C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.csproj.Up2Date
 C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.exe
 C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.pdb
 C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.Migrations.InitialCreate.resources
+C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.exe.config

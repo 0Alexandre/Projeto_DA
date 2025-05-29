@@ -33,6 +33,7 @@
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btLogin = new System.Windows.Forms.Button();
+            this.criarConta = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -84,11 +85,23 @@
             this.btLogin.UseVisualStyleBackColor = true;
             this.btLogin.Click += new System.EventHandler(this.btLogin_Click);
             // 
+            // criarConta
+            // 
+            this.criarConta.AutoSize = true;
+            this.criarConta.ForeColor = System.Drawing.Color.Blue;
+            this.criarConta.Location = new System.Drawing.Point(183, 143);
+            this.criarConta.Name = "criarConta";
+            this.criarConta.Size = new System.Drawing.Size(73, 16);
+            this.criarConta.TabIndex = 5;
+            this.criarConta.Text = "Criar Conta";
+            this.criarConta.Click += new System.EventHandler(this.criarConta_Click);
+            // 
             // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(501, 214);
+            this.Controls.Add(this.criarConta);
             this.Controls.Add(this.btLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.label2);
@@ -110,5 +123,6 @@
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btLogin;
+        private System.Windows.Forms.Label criarConta;
     }
 }
