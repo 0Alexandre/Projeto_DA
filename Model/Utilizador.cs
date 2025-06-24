@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace iTasks
 {
+    public enum TipoUtilizador
+    {
+        Programador = 1,
+        Gestor = 2
+    }
+
     // Classe que representa um Utilizador da aplicação
     public class Utilizador
     {
@@ -20,6 +23,37 @@ namespace iTasks
 
         // Palavra-passe do utilizador
         public string Password { get; set; }
+
+        public TipoUtilizador Tipo { get; set; }
+
+        // Se for Programador, deve ter um Gestor
+        public int? GestorId { get; set; }
+        public virtual Utilizador Gestor { get; set; }
+
+        // Se for Gestor, pode ter vários Programadores
+        public virtual ICollection<Utilizador> Programadores { get; set; }
+
+        // Construtor vazio (necessário para EF e uso geral)
+        public Utilizador()
+        {
+            Programadores = new List<Utilizador>();
+        }
+
+        // Construtor personalizado (útil para criar rapidamente um utilizador)
+        public Utilizador(string nome, string username, string password, TipoUtilizador tipo)
+        {
+            Nome = nome;
+            Username = username;
+            Password = password;
+            Tipo = tipo;
+            Programadores = new List<Utilizador>();
+        }
+
+        // ToString para apresentar de forma útil nas listas e debug
+        public override string ToString()
+        {
+            return $"{Nome} ({Tipo})";
+        }
     }
 
     // Classe estática para armazenar a sessão do utilizador atualmente autenticado
@@ -29,4 +63,3 @@ namespace iTasks
         public static Utilizador UtilizadorGuardado { get; set; }
     }
 }
-

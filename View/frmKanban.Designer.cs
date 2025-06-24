@@ -50,6 +50,8 @@
             this.btNova = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btPrevisao = new System.Windows.Forms.Button();
+            this.btRemover = new System.Windows.Forms.Button();
+            this.btLimparSelecao = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -64,6 +66,8 @@
             this.lstTodo.Name = "lstTodo";
             this.lstTodo.Size = new System.Drawing.Size(296, 419);
             this.lstTodo.TabIndex = 0;
+            this.lstTodo.SelectedIndexChanged += new System.EventHandler(this.lstTodo_SelectedIndexChanged);
+            this.lstTodo.DoubleClick += new System.EventHandler(this.lstTodo_DoubleClick);
             // 
             // groupBox1
             // 
@@ -93,6 +97,7 @@
             this.lstDoing.Name = "lstDoing";
             this.lstDoing.Size = new System.Drawing.Size(296, 422);
             this.lstDoing.TabIndex = 0;
+            this.lstDoing.SelectedIndexChanged += new System.EventHandler(this.lstDoing_SelectedIndexChanged);
             // 
             // groupBox3
             // 
@@ -112,6 +117,7 @@
             this.lstDone.Name = "lstDone";
             this.lstDone.Size = new System.Drawing.Size(296, 422);
             this.lstDone.TabIndex = 0;
+            this.lstDone.SelectedIndexChanged += new System.EventHandler(this.lstDone_SelectedIndexChanged);
             // 
             // menuStrip1
             // 
@@ -126,6 +132,7 @@
             this.menuStrip1.Size = new System.Drawing.Size(943, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // ficheiroToolStripMenuItem
             // 
@@ -148,6 +155,7 @@
             this.exportarParaCSVToolStripMenuItem.Name = "exportarParaCSVToolStripMenuItem";
             this.exportarParaCSVToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.exportarParaCSVToolStripMenuItem.Text = "Exportar Tarefas Concluídas para CSV";
+            this.exportarParaCSVToolStripMenuItem.Click += new System.EventHandler(this.exportarParaCSVToolStripMenuItem_Click);
             // 
             // utilizadoresToolStripMenuItem
             // 
@@ -163,12 +171,14 @@
             this.gerirUtilizadoresToolStripMenuItem.Name = "gerirUtilizadoresToolStripMenuItem";
             this.gerirUtilizadoresToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.gerirUtilizadoresToolStripMenuItem.Text = "Gerir Utilizadores";
+            this.gerirUtilizadoresToolStripMenuItem.Click += new System.EventHandler(this.gerirUtilizadoresToolStripMenuItem_Click);
             // 
             // gerirTiposDeTarefasToolStripMenuItem
             // 
             this.gerirTiposDeTarefasToolStripMenuItem.Name = "gerirTiposDeTarefasToolStripMenuItem";
             this.gerirTiposDeTarefasToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.gerirTiposDeTarefasToolStripMenuItem.Text = "Gerir Tipos de Tarefas";
+            this.gerirTiposDeTarefasToolStripMenuItem.Click += new System.EventHandler(this.gerirTiposDeTarefasToolStripMenuItem_Click);
             // 
             // listagensToolStripMenuItem
             // 
@@ -182,14 +192,16 @@
             // tarefasTerminadasToolStripMenuItem
             // 
             this.tarefasTerminadasToolStripMenuItem.Name = "tarefasTerminadasToolStripMenuItem";
-            this.tarefasTerminadasToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.tarefasTerminadasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tarefasTerminadasToolStripMenuItem.Text = "Tarefas Concluídas";
+            this.tarefasTerminadasToolStripMenuItem.Click += new System.EventHandler(this.tarefasTerminadasToolStripMenuItem_Click);
             // 
             // tarefasEmCursoToolStripMenuItem
             // 
             this.tarefasEmCursoToolStripMenuItem.Name = "tarefasEmCursoToolStripMenuItem";
-            this.tarefasEmCursoToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
+            this.tarefasEmCursoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.tarefasEmCursoToolStripMenuItem.Text = "Tarefas em Curso";
+            this.tarefasEmCursoToolStripMenuItem.Click += new System.EventHandler(this.tarefasEmCursoToolStripMenuItem_Click);
             // 
             // btSetDoing
             // 
@@ -199,6 +211,7 @@
             this.btSetDoing.TabIndex = 5;
             this.btSetDoing.Text = "Executar Tarefa >>";
             this.btSetDoing.UseVisualStyleBackColor = true;
+            this.btSetDoing.Click += new System.EventHandler(this.btSetDoing_Click);
             // 
             // btSetDone
             // 
@@ -208,6 +221,7 @@
             this.btSetDone.TabIndex = 6;
             this.btSetDone.Text = "Terminar Tarefa >>";
             this.btSetDone.UseVisualStyleBackColor = true;
+            this.btSetDone.Click += new System.EventHandler(this.btSetDone_Click);
             // 
             // btSetTodo
             // 
@@ -217,6 +231,7 @@
             this.btSetTodo.TabIndex = 7;
             this.btSetTodo.Text = "<< Reiniciar Tarefa";
             this.btSetTodo.UseVisualStyleBackColor = true;
+            this.btSetTodo.Click += new System.EventHandler(this.btSetTodo_Click);
             // 
             // btNova
             // 
@@ -226,6 +241,7 @@
             this.btNova.TabIndex = 8;
             this.btNova.Text = "Nova Tarefa";
             this.btNova.UseVisualStyleBackColor = true;
+            this.btNova.Click += new System.EventHandler(this.btNova_Click);
             // 
             // label1
             // 
@@ -245,12 +261,35 @@
             this.btPrevisao.TabIndex = 10;
             this.btPrevisao.Text = "Ver Previsão de Conclusão";
             this.btPrevisao.UseVisualStyleBackColor = true;
+            this.btPrevisao.Click += new System.EventHandler(this.btPrevisao_Click);
+            // 
+            // btRemover
+            // 
+            this.btRemover.Location = new System.Drawing.Point(628, 502);
+            this.btRemover.Name = "btRemover";
+            this.btRemover.Size = new System.Drawing.Size(144, 23);
+            this.btRemover.TabIndex = 11;
+            this.btRemover.Text = "<< Remover Tarefa >>";
+            this.btRemover.UseVisualStyleBackColor = true;
+            this.btRemover.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btLimparSelecao
+            // 
+            this.btLimparSelecao.Location = new System.Drawing.Point(805, 502);
+            this.btLimparSelecao.Name = "btLimparSelecao";
+            this.btLimparSelecao.Size = new System.Drawing.Size(122, 23);
+            this.btLimparSelecao.TabIndex = 47;
+            this.btLimparSelecao.Text = "Limpar Seleção";
+            this.btLimparSelecao.UseVisualStyleBackColor = true;
+            this.btLimparSelecao.Click += new System.EventHandler(this.btLimparSelecao_Click);
             // 
             // frmKanban
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(943, 537);
+            this.Controls.Add(this.btLimparSelecao);
+            this.Controls.Add(this.btRemover);
             this.Controls.Add(this.btPrevisao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btNova);
@@ -264,6 +303,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "frmKanban";
             this.Text = "frmKanban";
+            this.Load += new System.EventHandler(this.frmKanban_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
@@ -298,5 +338,7 @@
         private System.Windows.Forms.Button btNova;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btPrevisao;
+        private System.Windows.Forms.Button btRemover;
+        private System.Windows.Forms.Button btLimparSelecao;
     }
 }

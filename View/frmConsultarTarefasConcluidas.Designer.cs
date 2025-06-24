@@ -41,6 +41,7 @@
             this.btFechar.TabIndex = 32;
             this.btFechar.Text = "Fechar";
             this.btFechar.UseVisualStyleBackColor = true;
+            this.btFechar.Click += new System.EventHandler(this.btFechar_Click);
             // 
             // gvTarefasConcluidas
             // 
@@ -49,6 +50,7 @@
             this.gvTarefasConcluidas.Name = "gvTarefasConcluidas";
             this.gvTarefasConcluidas.Size = new System.Drawing.Size(1026, 395);
             this.gvTarefasConcluidas.TabIndex = 31;
+            this.gvTarefasConcluidas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gvTarefasConcluidas_CellContentClick);
             // 
             // frmConsultarTarefasConcluidas
             // 

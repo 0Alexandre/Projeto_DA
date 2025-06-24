@@ -8,9 +8,9 @@ namespace iTasks
     public class AppDbContext : DbContext
     {
         // Construtor que define a string de ligação à base de dados local (LocalDB)
-        public AppDbContext() : base(@"Data Source = (LocalDB)\MSSQLLocalDB; 
-                                       AttachDbFilename=C:\Users\Alexandre\Documents\Projeto_DA\Database.mdf;
-                                       Integrated Security = True")
+        public AppDbContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;
+                               AttachDbFilename=C:\Users\Alexandre\Documents\Projeto_DA\Database.mdf;
+                               Integrated Security=True")
         {
             // Esta base de dados será usada durante a execução da aplicação
         }
@@ -25,12 +25,16 @@ namespace iTasks
         // Método que configura o mapeamento das entidades para tabelas
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            // Mapeia explicitamente cada entidade para a respetiva tabela
+            modelBuilder.Entity<Utilizador>()
+                .HasOptional(u => u.Gestor)
+                .WithMany(g => g.Programadores)
+                .HasForeignKey(u => u.GestorId);
+
+            // Outros mapeamentos que já tem
             modelBuilder.Entity<Gestor>().ToTable("Gestores");
             modelBuilder.Entity<Programador>().ToTable("Programadores");
             modelBuilder.Entity<Utilizador>().ToTable("Utilizadores");
 
-            // Chamada ao método base (recomendado)
             base.OnModelCreating(modelBuilder);
         }
     }

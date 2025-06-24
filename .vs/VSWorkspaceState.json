@@ -1,8 +1,9 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Migrations",
     "\\Model"
   ],
-  "SelectedNode": "\\Model\\Tarefa.cs",
+  "SelectedNode": "\\Migrations\\202505302036470_CorrigirUtilizador.cs",
   "PreviewInSolutionExplorer": false
 }

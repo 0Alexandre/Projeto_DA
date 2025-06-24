@@ -16,5 +16,15 @@ namespace iTasks
         {
             InitializeComponent();
         }
+
+        private void btFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void gvTarefasConcluidas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

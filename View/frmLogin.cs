@@ -1,4 +1,5 @@
 ﻿using iTasks.Controllers;
+using iTasks.View;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -78,7 +79,8 @@ namespace iTasks
 
         private void criarConta_Click(object sender, EventArgs e)
         {
-
+            frmCriarConta frmCriarConta = new frmCriarConta();
+            frmCriarConta.ShowDialog();
         }
 
         private void label_Personalizado()

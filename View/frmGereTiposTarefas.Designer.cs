@@ -56,6 +56,7 @@
             this.lstLista.Name = "lstLista";
             this.lstLista.Size = new System.Drawing.Size(268, 366);
             this.lstLista.TabIndex = 0;
+            this.lstLista.SelectedIndexChanged += new System.EventHandler(this.lstLista_SelectedIndexChanged);
             // 
             // txtDesc
             // 
@@ -63,6 +64,7 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(286, 20);
             this.txtDesc.TabIndex = 15;
+            this.txtDesc.TextChanged += new System.EventHandler(this.txtDesc_TextChanged);
             // 
             // label4
             // 
@@ -80,6 +82,7 @@
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(62, 20);
             this.txtId.TabIndex = 13;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label1
             // 
@@ -98,6 +101,7 @@
             this.btGravar.TabIndex = 31;
             this.btGravar.Text = "Gravar Dados";
             this.btGravar.UseVisualStyleBackColor = true;
+            this.btGravar.Click += new System.EventHandler(this.btGravar_Click);
             // 
             // frmGereTiposTarefas
             // 
@@ -112,6 +116,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "frmGereTiposTarefas";
             this.Text = "frmGereTiposTarefas";
+            this.Load += new System.EventHandler(this.frmGereTiposTarefas_Load);
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();

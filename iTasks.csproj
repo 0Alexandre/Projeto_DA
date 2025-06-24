@@ -13,6 +13,9 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Disk</InstallFrom>
@@ -25,11 +28,8 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ApplicationRevision>0</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
     <UseApplicationTrust>false</UseApplicationTrust>
     <BootstrapperEnabled>true</BootstrapperEnabled>
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,7 +71,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controller\GestorControlador.cs" />
     <Compile Include="Controller\LoginSistema.cs" />
+    <Compile Include="Controller\ProgramadorControlador.cs" />
+    <Compile Include="Controller\TarefaControlador.cs" />
+    <Compile Include="Controller\TipoTarefaControlador.cs" />
+    <Compile Include="Migrations\202505302036470_CorrigirUtilizador.cs" />
+    <Compile Include="Migrations\202505302036470_CorrigirUtilizador.Designer.cs">
+      <DependentUpon>202505302036470_CorrigirUtilizador.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506191800274_campos_obrigatorios.cs" />
+    <Compile Include="Migrations\202506191800274_campos_obrigatorios.Designer.cs">
+      <DependentUpon>202506191800274_campos_obrigatorios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202506241520326_CamposObrigatorios.cs" />
+    <Compile Include="Migrations\202506241520326_CamposObrigatorios.Designer.cs">
+      <DependentUpon>202506241520326_CamposObrigatorios.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\AppDbContext.cs" />
     <Compile Include="Migrations\202505141040382_InitialCreate.cs" />
     <Compile Include="Migrations\202505141040382_InitialCreate.Designer.cs">
@@ -129,6 +145,15 @@
     <Compile Include="Model\Utilizador.cs" />
     <EmbeddedResource Include="Migrations\202505141040382_InitialCreate.resx">
       <DependentUpon>202505141040382_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202505302036470_CorrigirUtilizador.resx">
+      <DependentUpon>202505302036470_CorrigirUtilizador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506191800274_campos_obrigatorios.resx">
+      <DependentUpon>202506191800274_campos_obrigatorios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202506241520326_CamposObrigatorios.resx">
+      <DependentUpon>202506241520326_CamposObrigatorios.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\frmConsultarTarefasConcluidas.resx">
       <DependentUpon>frmConsultarTarefasConcluidas.cs</DependentUpon>

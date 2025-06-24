@@ -65,6 +65,7 @@
             this.txtId.ReadOnly = true;
             this.txtId.Size = new System.Drawing.Size(62, 20);
             this.txtId.TabIndex = 3;
+            this.txtId.TextChanged += new System.EventHandler(this.txtId_TextChanged);
             // 
             // label1
             // 
@@ -91,6 +92,7 @@
             this.cbProgramador.Name = "cbProgramador";
             this.cbProgramador.Size = new System.Drawing.Size(311, 21);
             this.cbProgramador.TabIndex = 6;
+            this.cbProgramador.SelectedIndexChanged += new System.EventHandler(this.cbProgramador_SelectedIndexChanged);
             // 
             // txtOrdem
             // 
@@ -98,6 +100,7 @@
             this.txtOrdem.Name = "txtOrdem";
             this.txtOrdem.Size = new System.Drawing.Size(62, 20);
             this.txtOrdem.TabIndex = 9;
+            this.txtOrdem.TextChanged += new System.EventHandler(this.txtOrdem_TextChanged);
             // 
             // label2
             // 
@@ -114,6 +117,7 @@
             this.txtDesc.Name = "txtDesc";
             this.txtDesc.Size = new System.Drawing.Size(425, 20);
             this.txtDesc.TabIndex = 11;
+            this.txtDesc.TextChanged += new System.EventHandler(this.txtDesc_TextChanged);
             // 
             // label4
             // 
@@ -140,6 +144,7 @@
             this.cbTipoTarefa.Name = "cbTipoTarefa";
             this.cbTipoTarefa.Size = new System.Drawing.Size(311, 21);
             this.cbTipoTarefa.TabIndex = 12;
+            this.cbTipoTarefa.SelectedIndexChanged += new System.EventHandler(this.cbTipoTarefa_SelectedIndexChanged);
             // 
             // dtInicio
             // 
@@ -147,6 +152,7 @@
             this.dtInicio.Name = "dtInicio";
             this.dtInicio.Size = new System.Drawing.Size(200, 20);
             this.dtInicio.TabIndex = 14;
+            this.dtInicio.ValueChanged += new System.EventHandler(this.dtInicio_ValueChanged);
             // 
             // label6
             // 
@@ -172,6 +178,7 @@
             this.dtFim.Name = "dtFim";
             this.dtFim.Size = new System.Drawing.Size(200, 20);
             this.dtFim.TabIndex = 16;
+            this.dtFim.ValueChanged += new System.EventHandler(this.dtFim_ValueChanged);
             // 
             // txtEstado
             // 
@@ -180,6 +187,7 @@
             this.txtEstado.ReadOnly = true;
             this.txtEstado.Size = new System.Drawing.Size(131, 20);
             this.txtEstado.TabIndex = 19;
+            this.txtEstado.TextChanged += new System.EventHandler(this.txtEstado_TextChanged);
             // 
             // label8
             // 
@@ -197,6 +205,7 @@
             this.txtDataRealini.ReadOnly = true;
             this.txtDataRealini.Size = new System.Drawing.Size(135, 20);
             this.txtDataRealini.TabIndex = 21;
+            this.txtDataRealini.TextChanged += new System.EventHandler(this.txtDataRealini_TextChanged);
             // 
             // label9
             // 
@@ -214,15 +223,16 @@
             this.txtdataRealFim.ReadOnly = true;
             this.txtdataRealFim.Size = new System.Drawing.Size(135, 20);
             this.txtdataRealFim.TabIndex = 23;
+            this.txtdataRealFim.TextChanged += new System.EventHandler(this.txtdataRealFim_TextChanged);
             // 
             // label10
             // 
             this.label10.AutoSize = true;
             this.label10.Location = new System.Drawing.Point(23, 71);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(103, 13);
+            this.label10.Size = new System.Drawing.Size(92, 13);
             this.label10.TabIndex = 22;
-            this.label10.Text = "Data Real de Início:";
+            this.label10.Text = "Data Real de Fim:";
             // 
             // txtDataCriacao
             // 
@@ -265,6 +275,7 @@
             this.btGravar.TabIndex = 28;
             this.btGravar.Text = "Gravar Dados";
             this.btGravar.UseVisualStyleBackColor = true;
+            this.btGravar.Click += new System.EventHandler(this.btGravar_Click);
             // 
             // btFechar
             // 
@@ -274,6 +285,7 @@
             this.btFechar.TabIndex = 29;
             this.btFechar.Text = "Fechar";
             this.btFechar.UseVisualStyleBackColor = true;
+            this.btFechar.Click += new System.EventHandler(this.btFechar_Click);
             // 
             // txtStoryPoints
             // 
@@ -326,6 +338,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmDetalhesTarefa";
             this.Text = "frmDetalhesTarefa";
+            this.Load += new System.EventHandler(this.frmDetalhesTarefa_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
