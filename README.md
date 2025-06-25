@@ -61,3 +61,12 @@ iTasks
 * ORM: **Entity Framework**
 * Base de Dados: **SQL Server Express LocalDB**
 * Controlo de Versões: **Git / GitHub**
+
+---
+
+* ## Autores
+
+* Alexandre Simões
+* Guilherme Fernandes
+* Frederico Gonçalves
+
