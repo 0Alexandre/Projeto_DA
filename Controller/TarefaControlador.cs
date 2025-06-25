@@ -199,9 +199,6 @@ namespace iTasks.Controller
                 // escreve o ficheiro
                 using (var sw = new StreamWriter(filePath, false, Encoding.UTF8))
                 {
-                    // cabeçalho
-                    sw.WriteLine("Programador;Descricao;DataPrevistaInicio;DataPrevistaFim;TipoTarefa;DataRealInicio;DataRealFim");
-
                     foreach (var t in tarefas)
                     {
                         var prog = t.Programador?.Nome ?? "";
