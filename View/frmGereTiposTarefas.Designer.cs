@@ -35,6 +35,8 @@
             this.txtId = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btGravar = new System.Windows.Forms.Button();
+            this.btEliminar = new System.Windows.Forms.Button();
+            this.btLimparSelecao = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -103,11 +105,33 @@
             this.btGravar.UseVisualStyleBackColor = true;
             this.btGravar.Click += new System.EventHandler(this.btGravar_Click);
             // 
+            // btEliminar
+            // 
+            this.btEliminar.Location = new System.Drawing.Point(506, 124);
+            this.btEliminar.Name = "btEliminar";
+            this.btEliminar.Size = new System.Drawing.Size(139, 23);
+            this.btEliminar.TabIndex = 32;
+            this.btEliminar.Text = "Eliminar";
+            this.btEliminar.UseVisualStyleBackColor = true;
+            this.btEliminar.Click += new System.EventHandler(this.btEliminar_Click);
+            // 
+            // btLimparSelecao
+            // 
+            this.btLimparSelecao.Location = new System.Drawing.Point(444, 369);
+            this.btLimparSelecao.Name = "btLimparSelecao";
+            this.btLimparSelecao.Size = new System.Drawing.Size(201, 23);
+            this.btLimparSelecao.TabIndex = 47;
+            this.btLimparSelecao.Text = "Limpar Seleção";
+            this.btLimparSelecao.UseVisualStyleBackColor = true;
+            this.btLimparSelecao.Click += new System.EventHandler(this.btLimparSelecao_Click);
+            // 
             // frmGereTiposTarefas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(664, 404);
+            this.Controls.Add(this.btLimparSelecao);
+            this.Controls.Add(this.btEliminar);
             this.Controls.Add(this.btGravar);
             this.Controls.Add(this.txtDesc);
             this.Controls.Add(this.label4);
@@ -132,5 +156,7 @@
         private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btGravar;
+        private System.Windows.Forms.Button btEliminar;
+        private System.Windows.Forms.Button btLimparSelecao;
     }
 }

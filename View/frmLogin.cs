@@ -1,17 +1,7 @@
 ﻿using iTasks.Controllers;
 using iTasks.View;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace iTasks
 {
@@ -19,83 +9,77 @@ namespace iTasks
     {
         public frmLogin()
         {
-            InitializeComponent();
-            label_Personalizado();
+            InitializeComponent(); // Inicializa os componentes do form (botões, textboxes, etc.)
         }
 
+        // Método que executa o processo de login
         private void login()
         {
-            // Guarda os dados introduzidos pelo utilizador no formulário (sem espaços em branco)
+            // Lê e limpa espaços em branco dos campos
             string username = txtUsername.Text.Trim();
             string password = txtPassword.Text.Trim();
 
-            // Cria uma instância do controlador responsável pelo login
+            // Controlador que contém a lógica de autenticação
             LoginController controller = new LoginController();
 
-            // Tenta autenticar o utilizador com os dados introduzidos
+            // Tenta autenticar com os dados fornecidos
             Utilizador utilizadorEncontrado = controller.Entrar(username, password);
 
-            // Se o utilizador foi encontrado com sucesso
             if (utilizadorEncontrado != null)
             {
-                // Guarda o utilizador na sessão para uso noutras janelas
+                // Armazena o utilizador autenticado na sessão global
                 Sessao.UtilizadorGuardado = utilizadorEncontrado;
 
-                // Mostra uma mensagem de sucesso
                 MessageBox.Show("Login efetuado com sucesso!");
 
-                // Abre o formulario principal (Kanban) e esconde o formulario atual (formLogin)
+                // Abre o form principal e esconde o de login
                 frmKanban kanban = new frmKanban();
                 kanban.Show();
                 this.Hide();
             }
             else
             {
-                // Se as credenciais estiverem incorretas, mostra uma mensagem de erro
+                // Aviso caso nome de utilizador ou senha estejam incorretos
                 MessageBox.Show("Credenciais incorretas.");
             }
         }
 
-
+        // Evento disparado quando o form de login é exibido
         private void frmLogin_Load(object sender, EventArgs e)
         {
+            var loginCtrl = new LoginController();
 
+            // Se a BD ainda não tem utilizadores, abre o form para criar o primeiro Gestor
+            if (!loginCtrl.ExisteUtilizadores())
+            {
+                using (var frm = new frmCriarConta(isPrimeiro: true))
+                {
+                    // Se cancelar a criação, encerra a aplicação
+                    if (frm.ShowDialog() != DialogResult.OK)
+                    {
+                        Application.Exit();
+                        return;
+                    }
+                }
+            }
         }
 
-        private void txtUsername_TextChanged(object sender, EventArgs e)
-        {
+        // Eventos vazios (ligados pelo Designer) — mantêm a compatibilidade
+        private void txtUsername_TextChanged(object sender, EventArgs e) { }
+        private void txtPassword_TextChanged(object sender, EventArgs e) { }
 
-        }
-
-        private void txtPassword_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
+        // Clique no botão “Login”
         private void btLogin_Click(object sender, EventArgs e)
         {
-            login();
+            login(); // Chama o método de autenticação
         }
 
+        // Clique no link “Criar Conta” (modo manual, para além do gestor inicial)
         private void criarConta_Click(object sender, EventArgs e)
         {
+            // Abre o form de criação de conta em modo normal
             frmCriarConta frmCriarConta = new frmCriarConta();
             frmCriarConta.ShowDialog();
-        }
-
-        private void label_Personalizado()
-        {
-            criarConta.MouseEnter += (sender, e) =>
-            {
-                criarConta.ForeColor = System.Drawing.Color.Blue;
-                criarConta.Font = new System.Drawing.Font(criarConta.Font, System.Drawing.FontStyle.Underline);
-            };
-
-            criarConta.MouseLeave += (sender, e) =>
-            {
-                criarConta.ForeColor = System.Drawing.Color.Blue;
-                criarConta.Font = new System.Drawing.Font(criarConta.Font, System.Drawing.FontStyle.Regular); // Remove o underline
-            };
         }
     }
 }

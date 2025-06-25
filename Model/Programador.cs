@@ -29,7 +29,6 @@ namespace iTasks.Model
         // ToString para apresentar de forma útil na UI e no debug
         public override string ToString()
         {
-            // Exemplo: "João Martins (Programador – Sénior)"
             return $"{Nome} (Programador – {NivelExperiencia})";
         }
     }

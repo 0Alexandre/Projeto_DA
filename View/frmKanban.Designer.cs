@@ -49,7 +49,6 @@
             this.btSetTodo = new System.Windows.Forms.Button();
             this.btNova = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.btPrevisao = new System.Windows.Forms.Button();
             this.btRemover = new System.Windows.Forms.Button();
             this.btLimparSelecao = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
@@ -192,14 +191,14 @@
             // tarefasTerminadasToolStripMenuItem
             // 
             this.tarefasTerminadasToolStripMenuItem.Name = "tarefasTerminadasToolStripMenuItem";
-            this.tarefasTerminadasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tarefasTerminadasToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.tarefasTerminadasToolStripMenuItem.Text = "Tarefas Concluídas";
             this.tarefasTerminadasToolStripMenuItem.Click += new System.EventHandler(this.tarefasTerminadasToolStripMenuItem_Click);
             // 
             // tarefasEmCursoToolStripMenuItem
             // 
             this.tarefasEmCursoToolStripMenuItem.Name = "tarefasEmCursoToolStripMenuItem";
-            this.tarefasEmCursoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.tarefasEmCursoToolStripMenuItem.Size = new System.Drawing.Size(173, 22);
             this.tarefasEmCursoToolStripMenuItem.Text = "Tarefas em Curso";
             this.tarefasEmCursoToolStripMenuItem.Click += new System.EventHandler(this.tarefasEmCursoToolStripMenuItem_Click);
             // 
@@ -253,16 +252,6 @@
             this.label1.Text = "Bem vindo: <Nome Utilizador>";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // btPrevisao
-            // 
-            this.btPrevisao.Location = new System.Drawing.Point(12, 29);
-            this.btPrevisao.Name = "btPrevisao";
-            this.btPrevisao.Size = new System.Drawing.Size(167, 23);
-            this.btPrevisao.TabIndex = 10;
-            this.btPrevisao.Text = "Ver Previsão de Conclusão";
-            this.btPrevisao.UseVisualStyleBackColor = true;
-            this.btPrevisao.Click += new System.EventHandler(this.btPrevisao_Click);
-            // 
             // btRemover
             // 
             this.btRemover.Location = new System.Drawing.Point(628, 502);
@@ -290,7 +279,6 @@
             this.ClientSize = new System.Drawing.Size(943, 537);
             this.Controls.Add(this.btLimparSelecao);
             this.Controls.Add(this.btRemover);
-            this.Controls.Add(this.btPrevisao);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btNova);
             this.Controls.Add(this.btSetTodo);
@@ -337,7 +325,6 @@
         private System.Windows.Forms.Button btSetTodo;
         private System.Windows.Forms.Button btNova;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btPrevisao;
         private System.Windows.Forms.Button btRemover;
         private System.Windows.Forms.Button btLimparSelecao;
     }

@@ -110,6 +110,12 @@
     <Compile Include="View\frmConsultaTarefasEmCurso.Designer.cs">
       <DependentUpon>frmConsultaTarefasEmCurso.cs</DependentUpon>
     </Compile>
+    <Compile Include="View\frmCriarConta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\frmCriarConta.Designer.cs">
+      <DependentUpon>frmCriarConta.cs</DependentUpon>
+    </Compile>
     <Compile Include="View\frmDetalhesTarefa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -161,6 +167,9 @@
     <EmbeddedResource Include="View\frmConsultaTarefasEmCurso.resx">
       <DependentUpon>frmConsultaTarefasEmCurso.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="View\frmCriarConta.resx">
+      <DependentUpon>frmCriarConta.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="View\frmDetalhesTarefa.resx">
       <DependentUpon>frmDetalhesTarefa.cs</DependentUpon>
     </EmbeddedResource>
@@ -200,9 +209,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Database.mdf" />
+    <Content Include="Database.mdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Database_log.ldf">
       <DependentUpon>Database.mdf</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <ItemGroup>

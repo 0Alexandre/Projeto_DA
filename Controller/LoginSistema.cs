@@ -3,35 +3,49 @@ using System.Linq;
 
 namespace iTasks.Controllers
 {
-    // Controlador responsável pela lógica de autenticação do utilizador
+    // Controlador responsável pela lógica de autenticação e criação de utilizadores
     public class LoginController
     {
-        // Instância do contexto da base de dados
+        // Mantém o contexto de BD para toda a duração do controlador
         private readonly AppDbContext _context;
 
-        // Construtor que inicializa o contexto ao criar o controlador
+        // Construtor: inicializa o contexto de base de dados
         public LoginController()
         {
             _context = new AppDbContext();
         }
 
-        // Método que tenta autenticar o utilizador com base no username e password
+        // Tenta autenticar pelo username e password fornecidos
         public Utilizador Entrar(string username, string password)
         {
-            // Procura um utilizador com o username fornecido
+            // Procura o utilizador pelo username (ignora maiúsculas/minúsculas)
             var utilizador = _context.Utilizadores
                 .FirstOrDefault(u => u.Username.ToLower() == username.ToLower());
 
-            // Verifica se encontrou o utilizador e se a password corresponde
+            // Se existir e a password corresponder, retorna-o; senão, null
             if (utilizador != null && utilizador.Password == password)
-            {
-                // Login bem-sucedido: retorna o utilizador autenticado
                 return utilizador;
-            }
 
-            // Caso contrário, retorna null (erro no login)
             return null;
+        }
+
+        // Verifica se há pelo menos um utilizador na base de dados
+        public bool ExisteUtilizadores()
+        {
+            return _context.Utilizadores.Any();
+        }
+
+        // Cria um novo utilizador (ex: no primeiro arranque ou via form)
+        public bool CriarUtilizador(Utilizador u)
+        {
+            // Garante username único (case-insensitive)
+            if (_context.Utilizadores.Any(x => x.Username.ToLower() == u.Username.ToLower()))
+                return false;              // falha se já existe
+
+            // Adiciona e grava no BD
+            _context.Utilizadores.Add(u);
+            _context.SaveChanges();
+            return true;                   // sucesso
         }
     }
 }
-

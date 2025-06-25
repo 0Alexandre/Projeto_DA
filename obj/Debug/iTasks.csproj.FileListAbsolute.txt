@@ -24,4 +24,5 @@ C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.Migrations.CorrigirUtil
 C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.Migrations.campos_obrigatorios.resources
 C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.View.frmCriarConta.resources
 C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.Migrations.CamposObrigatorios.resources
-C:\Users\Alexandre\Documents\Projeto_DA\obj\Debug\iTasks.exe.config
+C:\Users\Alexandre\Documents\Projeto_DA\bin\Debug\Database.mdf
+C:\Users\Alexandre\Documents\Projeto_DA\bin\Debug\Database_log.ldf

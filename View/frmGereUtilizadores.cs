@@ -9,6 +9,7 @@ namespace iTasks
 {
     public partial class frmGereUtilizadores : Form
     {
+        // Controladores para Gestores e Programadores
         private readonly GestorControlador gestorCtrl = new GestorControlador();
         private readonly ProgramadorControlador progCtrl = new ProgramadorControlador();
 
@@ -17,22 +18,39 @@ namespace iTasks
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Quando o formulário carrega, atualiza as listas e os combos,
+        /// e limpa qualquer seleção prévia.
+        /// </summary>
         private void frmGereUtilizadores_Load(object sender, EventArgs e)
         {
             AtualizarListas();
             PreencherCombos();
-            lstListaGestores.ClearSelected();
-            lstListaProgramadores.ClearSelected();
+            lstListaGestores.ClearSelected();        // remove seleção inicial
+            lstListaProgramadores.ClearSelected();   // remove seleção inicial
         }
 
+        /// <summary>
+        /// Carrega do banco de dados todos os Gestores e Programadores,
+        /// e define como DataSource dos respectivos ListBoxes.
+        /// </summary>
         private void AtualizarListas()
         {
+            // Lista de gestores (mostra apenas o Nome)
             lstListaGestores.DataSource = gestorCtrl.ListarGestores();
             lstListaGestores.DisplayMember = "Nome";
+
+            // Lista de programadores (mostra apenas o Nome)
             lstListaProgramadores.DataSource = progCtrl.ListarProgramadores();
             lstListaProgramadores.DisplayMember = "Nome";
         }
 
+        /// <summary>
+        /// Preenche os ComboBoxes com valores:
+        /// • Departamentos fixos
+        /// • Níveis de experiência fixos
+        /// • Lista de gestores para associação de programador
+        /// </summary>
         private void PreencherCombos()
         {
             // Departamentos hard-coded
@@ -52,13 +70,17 @@ namespace iTasks
                 "Sênior"
             };
 
-            // Lista de Gestores ainda vem da BD
+            // Para atribuir Gestor a Programador, lista Gestores atuais
             var gestores = gestorCtrl.ListarGestores();
             cbGestorProg.DataSource = gestores;
             cbGestorProg.DisplayMember = "Nome";
             cbGestorProg.ValueMember = "Id";
         }
 
+        /// <summary>
+        /// Ao selecionar um Gestor no ListBox, preenche os campos de edição.
+        /// Se nada estiver selecionado, limpa os campos.
+        /// </summary>
         private void lstListaGestores_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstListaGestores.SelectedItem is Gestor g)
@@ -72,6 +94,7 @@ namespace iTasks
             }
             else
             {
+                // Limpa tudo se nenhum gestor selecionado
                 txtIdGestor.Clear();
                 txtNomeGestor.Clear();
                 txtUsernameGestor.Clear();
@@ -81,6 +104,10 @@ namespace iTasks
             }
         }
 
+        /// <summary>
+        /// Botão GRAVAR para Gestor: cria novo ou atualiza existente.
+        /// Após sucesso, recarrega a lista de gestores.
+        /// </summary>
         private void btGravarGestor_Click(object sender, EventArgs e)
         {
             var gestor = new Gestor
@@ -93,10 +120,15 @@ namespace iTasks
                 Tipo = TipoUtilizador.Gestor
             };
 
+            // Se criar/atualizar sem erros, atualiza a lista
             if (gestorCtrl.CriarGestor(gestor))
                 AtualizarListas();
         }
 
+        /// <summary>
+        /// Ao selecionar um Programador no ListBox, preenche seus campos.
+        /// Se nada selecionado, limpa os campos.
+        /// </summary>
         private void lstListaProgramadores_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (lstListaProgramadores.SelectedItem is Programador p)
@@ -110,6 +142,7 @@ namespace iTasks
             }
             else
             {
+                // Limpa campos se nenhum programador selecionado
                 txtIdProg.Clear();
                 txtNomeProg.Clear();
                 txtUsernameProg.Clear();
@@ -119,6 +152,10 @@ namespace iTasks
             }
         }
 
+        /// <summary>
+        /// Botão GRAVAR para Programador: cria novo ou atualiza existente.
+        /// Após sucesso, recarrega a lista de programadores.
+        /// </summary>
         private void btGravarProg_Click(object sender, EventArgs e)
         {
             var prog = new Programador
@@ -131,10 +168,14 @@ namespace iTasks
                 Tipo = TipoUtilizador.Programador
             };
 
+            // Se criar/atualizar sem erros, atualiza a lista
             if (progCtrl.CriarProgramador(prog))
                 AtualizarListas();
         }
 
+        /// <summary>
+        /// Botão REMOVER Gestor: pergunta confirmação, e remove via controlador.
+        /// </summary>
         private void btnRemoverGestor_Click(object sender, EventArgs e)
         {
             if (lstListaGestores.SelectedItem is Gestor g)
@@ -151,6 +192,9 @@ namespace iTasks
             }
         }
 
+        /// <summary>
+        /// Botão REMOVER Programador: pergunta confirmação, e remove via controlador.
+        /// </summary>
         private void btnRemoverProg_Click(object sender, EventArgs e)
         {
             if (lstListaProgramadores.SelectedItem is Programador p)
@@ -167,11 +211,17 @@ namespace iTasks
             }
         }
 
+        /// <summary>
+        /// Limpa a seleção do ListBox de gestores.
+        /// </summary>
         private void btLimparSelecao1_Click(object sender, EventArgs e)
         {
             lstListaGestores.ClearSelected();
         }
 
+        /// <summary>
+        /// Limpa a seleção do ListBox de programadores.
+        /// </summary>
         private void btLimparSelecao2_Click(object sender, EventArgs e)
         {
             lstListaProgramadores.ClearSelected();
@@ -190,5 +240,6 @@ namespace iTasks
         private void txtPasswordGestor_TextChanged(object sender, EventArgs e) { }
         private void cbDepartamento_SelectedIndexChanged(object sender, EventArgs e) { }
         private void chkGereUtilizadores_CheckedChanged(object sender, EventArgs e) { }
+        private void groupBox3_Enter(object sender, EventArgs e) { }
     }
 }

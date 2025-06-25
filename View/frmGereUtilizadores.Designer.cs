@@ -36,6 +36,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.lstListaGestores = new System.Windows.Forms.ListBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btLimparSelecao1 = new System.Windows.Forms.Button();
+            this.btnRemoverGestor = new System.Windows.Forms.Button();
             this.chkGereUtilizadores = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txtPasswordGestor = new System.Windows.Forms.TextBox();
@@ -44,6 +46,8 @@
             this.txtUsernameGestor = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.btLimparSelecao2 = new System.Windows.Forms.Button();
+            this.btnRemoverProg = new System.Windows.Forms.Button();
             this.label11 = new System.Windows.Forms.Label();
             this.cbGestorProg = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -59,10 +63,6 @@
             this.label9 = new System.Windows.Forms.Label();
             this.txtNomeProg = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
-            this.btnRemoverGestor = new System.Windows.Forms.Button();
-            this.btnRemoverProg = new System.Windows.Forms.Button();
-            this.btLimparSelecao1 = new System.Windows.Forms.Button();
-            this.btLimparSelecao2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -158,6 +158,26 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Gestores";
             // 
+            // btLimparSelecao1
+            // 
+            this.btLimparSelecao1.Location = new System.Drawing.Point(294, 448);
+            this.btLimparSelecao1.Name = "btLimparSelecao1";
+            this.btLimparSelecao1.Size = new System.Drawing.Size(201, 23);
+            this.btLimparSelecao1.TabIndex = 45;
+            this.btLimparSelecao1.Text = "Limpar Seleção";
+            this.btLimparSelecao1.UseVisualStyleBackColor = true;
+            this.btLimparSelecao1.Click += new System.EventHandler(this.btLimparSelecao1_Click);
+            // 
+            // btnRemoverGestor
+            // 
+            this.btnRemoverGestor.Location = new System.Drawing.Point(294, 323);
+            this.btnRemoverGestor.Name = "btnRemoverGestor";
+            this.btnRemoverGestor.Size = new System.Drawing.Size(201, 23);
+            this.btnRemoverGestor.TabIndex = 44;
+            this.btnRemoverGestor.Text = "Remover Gestor";
+            this.btnRemoverGestor.UseVisualStyleBackColor = true;
+            this.btnRemoverGestor.Click += new System.EventHandler(this.btnRemoverGestor_Click);
+            // 
             // chkGereUtilizadores
             // 
             this.chkGereUtilizadores.AutoSize = true;
@@ -245,6 +265,27 @@
             this.groupBox3.TabIndex = 39;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Programadores";
+            this.groupBox3.Enter += new System.EventHandler(this.groupBox3_Enter);
+            // 
+            // btLimparSelecao2
+            // 
+            this.btLimparSelecao2.Location = new System.Drawing.Point(294, 448);
+            this.btLimparSelecao2.Name = "btLimparSelecao2";
+            this.btLimparSelecao2.Size = new System.Drawing.Size(201, 23);
+            this.btLimparSelecao2.TabIndex = 46;
+            this.btLimparSelecao2.Text = "Limpar Seleção";
+            this.btLimparSelecao2.UseVisualStyleBackColor = true;
+            this.btLimparSelecao2.Click += new System.EventHandler(this.btLimparSelecao2_Click);
+            // 
+            // btnRemoverProg
+            // 
+            this.btnRemoverProg.Location = new System.Drawing.Point(294, 323);
+            this.btnRemoverProg.Name = "btnRemoverProg";
+            this.btnRemoverProg.Size = new System.Drawing.Size(201, 23);
+            this.btnRemoverProg.TabIndex = 45;
+            this.btnRemoverProg.Text = "Remover Programador";
+            this.btnRemoverProg.UseVisualStyleBackColor = true;
+            this.btnRemoverProg.Click += new System.EventHandler(this.btnRemoverProg_Click);
             // 
             // label11
             // 
@@ -380,46 +421,6 @@
             this.label10.Size = new System.Drawing.Size(38, 13);
             this.label10.TabIndex = 35;
             this.label10.Text = "Nome:";
-            // 
-            // btnRemoverGestor
-            // 
-            this.btnRemoverGestor.Location = new System.Drawing.Point(294, 323);
-            this.btnRemoverGestor.Name = "btnRemoverGestor";
-            this.btnRemoverGestor.Size = new System.Drawing.Size(201, 23);
-            this.btnRemoverGestor.TabIndex = 44;
-            this.btnRemoverGestor.Text = "Remover Gestor";
-            this.btnRemoverGestor.UseVisualStyleBackColor = true;
-            this.btnRemoverGestor.Click += new System.EventHandler(this.btnRemoverGestor_Click);
-            // 
-            // btnRemoverProg
-            // 
-            this.btnRemoverProg.Location = new System.Drawing.Point(294, 323);
-            this.btnRemoverProg.Name = "btnRemoverProg";
-            this.btnRemoverProg.Size = new System.Drawing.Size(201, 23);
-            this.btnRemoverProg.TabIndex = 45;
-            this.btnRemoverProg.Text = "Remover Programador";
-            this.btnRemoverProg.UseVisualStyleBackColor = true;
-            this.btnRemoverProg.Click += new System.EventHandler(this.btnRemoverProg_Click);
-            // 
-            // btLimparSelecao1
-            // 
-            this.btLimparSelecao1.Location = new System.Drawing.Point(294, 448);
-            this.btLimparSelecao1.Name = "btLimparSelecao1";
-            this.btLimparSelecao1.Size = new System.Drawing.Size(201, 23);
-            this.btLimparSelecao1.TabIndex = 45;
-            this.btLimparSelecao1.Text = "Limpar Seleção";
-            this.btLimparSelecao1.UseVisualStyleBackColor = true;
-            this.btLimparSelecao1.Click += new System.EventHandler(this.btLimparSelecao1_Click);
-            // 
-            // btLimparSelecao2
-            // 
-            this.btLimparSelecao2.Location = new System.Drawing.Point(294, 448);
-            this.btLimparSelecao2.Name = "btLimparSelecao2";
-            this.btLimparSelecao2.Size = new System.Drawing.Size(201, 23);
-            this.btLimparSelecao2.TabIndex = 46;
-            this.btLimparSelecao2.Text = "Limpar Seleção";
-            this.btLimparSelecao2.UseVisualStyleBackColor = true;
-            this.btLimparSelecao2.Click += new System.EventHandler(this.btLimparSelecao2_Click);
             // 
             // frmGereUtilizadores
             // 

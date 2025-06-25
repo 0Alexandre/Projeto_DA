@@ -7,19 +7,23 @@ namespace iTasks
 {
     public partial class frmKanban : Form
     {
+        // Controlador para manipular as operações sobre Tarefa
         private readonly TarefaControlador tarefaCtrl = new TarefaControlador();
 
         public frmKanban()
         {
             InitializeComponent();
+            // Exibe o nome do utilizador logado na etiqueta
             label1.Text = $"Bem-vindo -> {Sessao.UtilizadorGuardado.Nome}!";
         }
 
+        // Evento disparado quando o formulário é carregado
         private void frmKanban_Load(object sender, EventArgs e)
         {
             AtualizarListas();
-            var tipo = Sessao.UtilizadorGuardado.Tipo;
 
+            // Define quais botões/menu estarão habilitados conforme o tipo de utilizador
+            var tipo = Sessao.UtilizadorGuardado.Tipo;
             gerirUtilizadoresToolStripMenuItem.Enabled = (tipo == TipoUtilizador.Gestor);
             gerirTiposDeTarefasToolStripMenuItem.Enabled = (tipo == TipoUtilizador.Gestor);
             btNova.Enabled = (tipo == TipoUtilizador.Gestor);
@@ -28,9 +32,12 @@ namespace iTasks
             exportarParaCSVToolStripMenuItem.Enabled = (tipo == TipoUtilizador.Gestor);
         }
 
+        // Atualiza as ListBox ToDo, Doing e Done com base no utilizador
         private void AtualizarListas()
         {
             var user = Sessao.UtilizadorGuardado;
+
+            // Se for Gestor, lista as tarefas criadas por ele; senão, apenas as atribuídas ao Programador
             lstTodo.DataSource = (user.Tipo == TipoUtilizador.Gestor)
                 ? tarefaCtrl.ListarTarefasPorGestor(user.Id, "ToDo")
                 : tarefaCtrl.ListarTarefasPorProgramador(user.Id, "ToDo");
@@ -41,30 +48,34 @@ namespace iTasks
                 ? tarefaCtrl.ListarTarefasPorGestor(user.Id, "Done")
                 : tarefaCtrl.ListarTarefasPorProgramador(user.Id, "Done");
 
+            // Limpa qualquer seleção anterior
             lstTodo.ClearSelected();
             lstDoing.ClearSelected();
             lstDone.ClearSelected();
         }
 
+        // Botão "Nova Tarefa" abre o formulário de detalhe em modo criação
         private void btNova_Click(object sender, EventArgs e)
         {
             var frm = new frmDetalhesTarefa(null, false);
             if (frm.ShowDialog() == DialogResult.OK)
-                AtualizarListas();
-            frm.Dispose();
+                AtualizarListas();  // Recarrega listas se nova tarefa foi criada
+            frm.Dispose();         // Libera recursos do form criado
         }
 
+        // Duplo clique em ToDo → abre o detalhe em modo só leitura
         private void lstTodo_DoubleClick(object sender, EventArgs e)
         {
             if (lstTodo.SelectedItem is Tarefa t)
             {
                 var frm = new frmDetalhesTarefa(t, true);
                 frm.ShowDialog();
-                AtualizarListas();
+                AtualizarListas();  // Atualiza após fechar
                 frm.Dispose();
             }
         }
 
+        // Botão "Executar" (ToDo→Doing): só para programador, verifica limite de 2 tarefas em Doing
         private void btSetDoing_Click(object sender, EventArgs e)
         {
             if (lstTodo.SelectedItem is Tarefa t &&
@@ -75,6 +86,7 @@ namespace iTasks
             }
         }
 
+        // Botão "Reiniciar" (Doing→ToDo): permite voltar se não estiver Done
         private void btSetTodo_Click(object sender, EventArgs e)
         {
             if (lstDoing.SelectedItem is Tarefa t && t.EstadoAtual != "Done")
@@ -84,6 +96,7 @@ namespace iTasks
             }
         }
 
+        // Botão "Terminar" (Doing→Done): só se for a tarefa de menor ordem
         private void btSetDone_Click(object sender, EventArgs e)
         {
             if (lstDoing.SelectedItem is Tarefa t &&
@@ -94,6 +107,7 @@ namespace iTasks
             }
         }
 
+        // Botão "Remover" elimina tarefa em ToDo, apenas se for do Gestor logado
         private void btRemover_Click(object sender, EventArgs e)
         {
             if (lstTodo.SelectedItem is Tarefa t &&
@@ -103,6 +117,7 @@ namespace iTasks
             }
         }
 
+        // Menu "Exportar para CSV" para tarefas concluídas (só gestor)
         private void exportarParaCSVToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var dlg = new SaveFileDialog
@@ -118,11 +133,16 @@ namespace iTasks
                 dlg.FileName
             );
 
-            string msg = sucesso ? "Exportação concluída!" : "Erro na exportação.";
-            var icon = sucesso ? MessageBoxIcon.Information : MessageBoxIcon.Error;
-            MessageBox.Show(msg, "Exportar CSV", MessageBoxButtons.OK, icon);
+            // Mostra resultado da exportação
+            MessageBox.Show(
+                sucesso ? "Exportação concluída!" : "Erro na exportação.",
+                "Exportar CSV",
+                MessageBoxButtons.OK,
+                sucesso ? MessageBoxIcon.Information : MessageBoxIcon.Error
+            );
         }
 
+        // Stubs de eventos sem lógica adicional (ligados pelo Designer)
         private void label1_Click(object sender, EventArgs e) { }
         private void sairToolStripMenuItem_Click(object sender, EventArgs e)
             => Application.Exit();
@@ -137,13 +157,15 @@ namespace iTasks
         private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e) { }
         private void lstDoing_SelectedIndexChanged(object sender, EventArgs e) { }
         private void lstDone_SelectedIndexChanged(object sender, EventArgs e) { }
-        private void button1_Click(object sender, EventArgs e){}
-        private void lstTodo_SelectedIndexChanged(object sender, EventArgs e){}
+        private void button1_Click(object sender, EventArgs e) { }
+        private void lstTodo_SelectedIndexChanged(object sender, EventArgs e) { }
 
+        // Botão "Previsão" (implementação futura)
         private void btPrevisao_Click(object sender, EventArgs e)
         {
         }
 
+        // Botão para limpar seleção em todas as listas
         private void btLimparSelecao_Click(object sender, EventArgs e)
         {
             lstTodo.ClearSelected();
