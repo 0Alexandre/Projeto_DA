@@ -45,7 +45,7 @@ O **iTasks** é uma aplicação desktop desenvolvida em **C# (.NET Framework)** 
 iTasks
 ├── Controllers/        # Lógica de negócio (Login, Gestor, Programador, Tarefa, TipoTarefa)
 ├── Model/              # Entidades (Utilizador, Gestor, Programador, Tarefa, TipoTarefa)
-├── View/               # Forms WinForms (Login, Kanban, Gestão, Detalhes, Listagens…)
+├── View/               # Forms WinForms (Login, Kanban, Gestão, Detalhes)
 ├── App.config          # Configuração da ligação à base de dados
 ├── Database.mdf        # Base de dados LocalDB (Entity Framework)
 ├── Projeto.sln         # Solution (.sln) e projetos (.csproj)
