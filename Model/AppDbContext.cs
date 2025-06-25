@@ -1,22 +1,27 @@
-﻿using iTasks;
+using iTasks;
 using iTasks.Model;
+using System;
 using System.Data.Entity;
+using System.IO;
 
 namespace iTasks
 {
     // Contexto do EF que mapeia as classes do Model às tabelas SQL
     public class AppDbContext : DbContext
     {
-        // Connection string usa |DataDirectory| para apontar
-        // à pasta de dados do utilizador, tornando o caminho portátil
         public AppDbContext()
-            : base(
-                @"Data Source=(LocalDB)\MSSQLLocalDB;
-                  AttachDbFilename=|DataDirectory|\Database.mdf;
-                  Integrated Security=True;
-                  Connect Timeout=30"
-              )
+            : base(GetConnectionString())
         {
+        }
+
+        private static string GetConnectionString()
+        {
+            // Construo o caminho para o .mdf dentro da pasta do executável
+            var dbFile = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Database.mdf");
+            return $@"Data Source=(LocalDB)\MSSQLLocalDB;
+                  AttachDbFilename={dbFile};
+                  Integrated Security=True;
+                  Connect Timeout=30;";
         }
 
         // Cada DbSet<T> expõe uma tabela no banco:
