@@ -1,3 +1,5 @@
+![Logo IPL](https://inforestudante.ipleiria.pt/nonio/util/obtemConteudoFicheiroImagemDadosLayoutInstituicao.do?codigo=IMAGEM_HEADER_NORMAL_INFORESTUDANTE&v=1749831571028)
+
 # 📋 iTasks – Gestão de Tarefas Kanban
 
 O **iTasks** é uma aplicação desktop desenvolvida em **C# (.NET Framework)** destinada à gestão interna de tarefas, baseada no conceito Kanban. Oferece funcionalidades completas de gestão para Gestores e Programadores.
